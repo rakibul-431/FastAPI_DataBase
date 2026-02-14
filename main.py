@@ -30,7 +30,7 @@ def get_name2(name:str,age:Optional[int]=Query(None,description="Enter your age"
         raise HTTPException(status_code=400,detail="Age must be greater than 15")
     return {'message':f'Hello {name}, Your age is {age}'}
 
-@app.post('Creat_student')
+@app.post('/Creat_student')
 def Creat_student(student:Student):
     return{
         'name':student.name,
